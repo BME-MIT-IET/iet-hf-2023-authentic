@@ -22,6 +22,6 @@ Ezek az eredmények arra utalnak, hogy a program jól optimalizált és hatékon
 
 ![Thread használat 30 perc alatt](Threads.png)
 
-**Non-Heap Memory:** 
+**Non-Heap Memory:** Ez a típusú memória arra szolgál, hogy tároljon JVM objektumokat, amelyek szükségesek a JVM működéséhez.
 
 ![Thread használat 30 perc alatt](Non-HeapMemory.png)
