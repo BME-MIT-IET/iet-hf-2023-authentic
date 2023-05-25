@@ -186,7 +186,7 @@ public class City {
                 boolean foundN = false;
                 while (!foundN) {
                     Field temp2 = fields.get(random.nextInt(fieldCount - 1));
-                    if (fields.get(i).getNeighbors().contains(temp2) != true) {
+                    if (!fields.get(i).getNeighbors().contains(temp2)) {
                         fields.get(i).addNeighbor(temp2);
                         foundN = true;
                     }
