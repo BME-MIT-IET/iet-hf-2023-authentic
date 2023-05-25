@@ -101,13 +101,6 @@ public class Virologist extends Citizen {
 
 
     /**
-     * A jatekos altal vezerlet bemenet hivja meg
-     */
-    public void equip() {
-
-    }
-
-    /**
      * Aktiv felszereleseket allitja be
      *
      * @param equipment az aktiv felszereles
@@ -125,14 +118,6 @@ public class Virologist extends Citizen {
 
 
     /**
-     * A jatekos altal vezerlet bemenet hivja meg
-     * Az aktiv felszerelesek kozul kivalaszt egyet a felhasznalo es azt atteszi a bag-be
-     */
-    public void unequip() {
-
-    }
-
-    /**
      * Az aktiv felszerelesekbol leveszi a parameterkent kapottat
      *
      * @param equipment a virologus aktiv felszerelese, amit le kell venni
@@ -147,14 +132,6 @@ public class Virologist extends Citizen {
                 effects.remove(effect);
             }
         }
-    }
-
-    /**
-     * A jatekos altal vezerlet bemenet hivja meg
-     * Kivalaszt egy felszerelest es azt eldobja
-     */
-    public void dropEquipment() {
-
     }
 
     /**
@@ -186,13 +163,6 @@ public class Virologist extends Citizen {
     }
 
     /**
-     * A jatekos altal vezerlet bemenet hivja meg
-     */
-    public void craft() {
-
-    }
-
-    /**
      * Letrehoz a virologus anyagkeszletebol egy uj agenst
      *
      * @param code az agans kodja
@@ -215,14 +185,6 @@ public class Virologist extends Citizen {
                 materials.remove(item);
             }
         }
-    }
-
-    /**
-     * A jatekos altal vezerlet bemenet hivja meg
-     * A felhasznalo agenst ken egy masik virologusra
-     */
-    public void useAgent() {
-
     }
 
     /**
@@ -281,14 +243,6 @@ public class Virologist extends Citizen {
             return toReturn;
         }
         return null;
-    }
-
-    /**
-     * A jatekos altal vezerlet bemenet hivja meg
-     * A virologus lopast indit egy masik virologus ellen, a megszerzett felszerelest es anyagkeszletet elrakja
-     */
-    public void steal() {
-
     }
 
     public int getNeededAmino() {

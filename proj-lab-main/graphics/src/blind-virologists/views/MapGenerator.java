@@ -145,8 +145,8 @@ public class MapGenerator {
 
                         int agentType = r.nextInt(2);
                         int effectType = r.nextInt(3);
-                        int aminoCost = r.nextInt(2);
-                        int nucleoCost = r.nextInt(2);
+                        int aminoCost = 0;
+                        int nucleoCost = 0;
                         Agent a = null;
                         Effect ef = null;
                         if (agentType == 0) {
