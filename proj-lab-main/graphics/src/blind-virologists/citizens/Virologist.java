@@ -113,15 +113,13 @@ public class Virologist extends Citizen {
      * @param equipment az aktiv felszereles
      */
     public void equip(Equipment equipment) {
-        if (activeEquipments.size() < 3) {
-            if (equipment != null) {
+        if (activeEquipments.size() < 3 && equipment != null) {
                 activeEquipments.add(equipment);
                 equipments.remove(equipment);
                 Effect effect = equipment.use(this);
                 if (effect != null) {
                     effects.add(effect);
                 }
-            }
         }
     }
 
