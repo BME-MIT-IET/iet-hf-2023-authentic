@@ -43,6 +43,7 @@ public class MenuView{
     private Field startField;
     private Virologist actualVirologist = new Virologist();
     //A map merete: 990, 550 -> 9, 5 db
+
     private String noEquipment="You have no equipment!";
 
     /**

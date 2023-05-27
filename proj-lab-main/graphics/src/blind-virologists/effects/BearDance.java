@@ -72,15 +72,18 @@ public class BearDance extends Effect {
             ArrayList<Field> neighborsFreeFields;
             neighborsFreeFields = affectedCitizen.getMoves();
 
-            Field randomNeighborsField = neighborsFreeFields.get(random.nextInt(neighborsFreeFields.size()));
+            Field randomNeighborsField = neighborsFreeFields.get(
+                    random.nextInt(neighborsFreeFields.size())
+            );
             affectedCitizen.setDirection(randomNeighborsField);
 
             ArrayList<Field> neighboursFields;
             neighboursFields = affectedCitizen.getCurrentField().getNeighbors();
             ArrayList<Citizen> neighborsCitizen = new ArrayList<>();
             for (Field neighboursField : neighboursFields) {
-                if (neighboursField != null && neighboursField.getCitizen() != null) {
-                        neighborsCitizen.add(neighboursField.getCitizen());
+                if (neighboursField != null &&
+                        neighboursField.getCitizen() != null) {
+                            neighborsCitizen.add(neighboursField.getCitizen());
                 }
             }
             for (Citizen citizen : neighborsCitizen) {

@@ -389,8 +389,10 @@ public class MapGenerator {
                 continue;
             }
 
-            int _offsetX = r.nextInt(2 * MAX_VERTEX_SHIFT_X) - MAX_VERTEX_SHIFT_X;
-            int _offsetY = r.nextInt(2 * MAX_VERTEX_SHIFT_Y) - MAX_VERTEX_SHIFT_Y;
+            int _offsetX = r.
+                            nextInt(2 * MAX_VERTEX_SHIFT_X) - MAX_VERTEX_SHIFT_X;
+            int _offsetY = r.
+                            nextInt(2 * MAX_VERTEX_SHIFT_Y) - MAX_VERTEX_SHIFT_Y;
 
             int newX = (edgeEnd.x - edgeBegin.x) / 2 + edgeBegin.x;
             int newY = (edgeEnd.y - edgeBegin.y) / 2 + edgeBegin.y;
