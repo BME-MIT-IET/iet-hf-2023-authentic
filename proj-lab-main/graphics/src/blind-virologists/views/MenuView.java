@@ -20,7 +20,7 @@ import static javax.swing.WindowConstants.EXIT_ON_CLOSE;
  * @since 2022-05-09
  */
 public class MenuView{
-    private static MapGenerator mapGenerator;
+    private MapGenerator mapGenerator;
     private City city;
     boolean generateMapBool = false;
     private JFrame window;
@@ -43,6 +43,7 @@ public class MenuView{
     private Field startField;
     private Virologist actualVirologist = new Virologist();
     //A map merete: 990, 550 -> 9, 5 db
+    private String noEquipment="You have no equipment!";
 
     /**
      * Elinditja es kirajzolja a jatekot.
@@ -154,8 +155,8 @@ public class MenuView{
                 makeDialogEquip();
                 repaintWindow();
             }else {
-                JOptionPane optionPane = new JOptionPane("You have no equipment!", JOptionPane.ERROR_MESSAGE, JOptionPane.DEFAULT_OPTION);
-                JDialog jDilaog = optionPane.createDialog("You have no equipment!");
+                JOptionPane optionPane = new JOptionPane(noEquipment, JOptionPane.ERROR_MESSAGE, JOptionPane.DEFAULT_OPTION);
+                JDialog jDilaog = optionPane.createDialog(noEquipment);
                 jDilaog.setVisible(true);
             }
         });
@@ -194,8 +195,8 @@ public class MenuView{
                 makeDialogDrop();
                 repaintWindow();
             }else {
-                JOptionPane optionPane = new JOptionPane("You have no equipment!", JOptionPane.ERROR_MESSAGE, JOptionPane.DEFAULT_OPTION);
-                JDialog jDilaog = optionPane.createDialog("You have no equipment!");
+                JOptionPane optionPane = new JOptionPane(noEquipment, JOptionPane.ERROR_MESSAGE, JOptionPane.DEFAULT_OPTION);
+                JDialog jDilaog = optionPane.createDialog(noEquipment);
                 jDilaog.setVisible(true);
             }
         });
