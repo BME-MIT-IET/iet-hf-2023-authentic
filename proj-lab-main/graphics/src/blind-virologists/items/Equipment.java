@@ -20,12 +20,12 @@ public abstract class Equipment {
      */
     protected Effect e;
 
-    public Equipment(BufferedImage img, Effect e) {
+    protected Equipment(BufferedImage img, Effect e) {
         this.img = img;
         this.e = e;
     }
 
-    public Equipment() {
+    protected Equipment() {
         this.e = null;
     }
 
