@@ -23,6 +23,8 @@ public class City {
     private ArrayList<Field> fields;
     private int codeCount;
 
+    Random random = new Random();
+
     /**
      * A City osztaly konstruktora
      */
@@ -165,7 +167,7 @@ public class City {
         il2.setCode(new Code(new Virus(), 3, 2));
 
 
-        Random random = new Random();
+
         for (int i = 0; i < playerCount - 1; i++) {
             boolean found = false;
             while (!found) {
@@ -179,9 +181,9 @@ public class City {
         }
 
 
-        Random random2 = new Random();
+
         for (int i = 0; i < fieldCount - 1; i++) {
-            int temp = random2.nextInt(6 - 3 + 1) + 3;
+            int temp = random.nextInt(6 - 3 + 1) + 3;
             for (int x = 0; x < temp - 1; x++) {
                 boolean foundN = false;
                 while (!foundN) {
