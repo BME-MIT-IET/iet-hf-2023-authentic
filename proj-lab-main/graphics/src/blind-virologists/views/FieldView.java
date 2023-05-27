@@ -11,7 +11,7 @@ public abstract class FieldView implements Drawable{
     protected Field fieldToDraw;
     protected Polygon polygonToDraw;
 
-    public FieldView(Field fieldToDraw, Polygon polygonToDraw) {
+    protected FieldView(Field fieldToDraw, Polygon polygonToDraw) {
         this.fieldToDraw = fieldToDraw;
         this.polygonToDraw = polygonToDraw;
     }
