@@ -21,6 +21,8 @@ import java.util.Random;
 
 public class MapGenerator {
 
+    Random r = new Random();
+
     public static class Coordinates {
         public int x, y;
 
@@ -77,7 +79,7 @@ public class MapGenerator {
 
         City city = new City();
 
-        Random r = new Random();
+
         int lowerIndex = 0;
         int upperIndex = 0;
         for (int i = 0; i < MAP_SIZE_Y; i++) {
@@ -346,7 +348,7 @@ public class MapGenerator {
      * @return uj poligon
      */
     private ArrayList<Coordinates> generateVertices(Polygon p) {
-        Random random = new Random();
+
 
         ArrayList<Coordinates> polyCoords = getPolyCoordinates(p);
 
@@ -371,13 +373,13 @@ public class MapGenerator {
                 continue;
             }
 
-            int addEdge = random.nextInt(3);
+            int addEdge = r.nextInt(3);
             if (addEdge == 0) {
                 continue;
             }
 
-            int _offsetX = random.nextInt(2 * MAX_VERTEX_SHIFT_X) - MAX_VERTEX_SHIFT_X;
-            int _offsetY = random.nextInt(2 * MAX_VERTEX_SHIFT_Y) - MAX_VERTEX_SHIFT_Y;
+            int _offsetX = r.nextInt(2 * MAX_VERTEX_SHIFT_X) - MAX_VERTEX_SHIFT_X;
+            int _offsetY = r.nextInt(2 * MAX_VERTEX_SHIFT_Y) - MAX_VERTEX_SHIFT_Y;
 
             int newX = (edgeEnd.x - edgeBegin.x) / 2 + edgeBegin.x;
             int newY = (edgeEnd.y - edgeBegin.y) / 2 + edgeBegin.y;
