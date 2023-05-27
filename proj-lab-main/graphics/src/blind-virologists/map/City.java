@@ -2,12 +2,12 @@ package map;
 
 import citizens.Citizen;
 import citizens.Virologist;
-import effects.Effect;
+
 import items.*;
 import main.Main;
 
 import javax.swing.*;
-import java.awt.event.WindowEvent;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -77,21 +77,6 @@ public class City {
         this.fields = fields;
     }
 
-    /**
-     * Beallitja a kodok maximalis szamat
-     *
-     * @param codes a kodok max szama
-     */
-    public void setCodeCount(int codes) {
-        this.codeCount = codes;
-    }
-
-    /**
-     * Visszaadja a kodok maximalis szamat
-     */
-    public int getCodeCount() {
-        return codeCount;
-    }
 
     /**
      * Hozzaad egy jatekost a city listajahoz
@@ -202,10 +187,7 @@ public class City {
     /**
      * Kiirja a tesztesetekhez szukseges informaciokat az adott objektumrol
      */
-    /*
-    public String toString(){
-    }
-    */
+
 
     /**
      * Elinditja a jatekot

@@ -141,16 +141,9 @@ public abstract class Citizen implements Visitor {
         this.resistance = resistance;
     }
 
-    public Field getDirection() {
-        return direction;
-    }
 
     public void setDirection(Field direction) {
         this.direction = direction;
-    }
-
-    public boolean isReflect() {
-        return reflect;
     }
 
     public void setReflect(boolean reflect) {

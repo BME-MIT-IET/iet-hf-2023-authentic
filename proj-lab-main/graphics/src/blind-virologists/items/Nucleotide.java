@@ -18,9 +18,7 @@ public class Nucleotide extends Material {
      */
 
     public Nucleotide(){}
-    public Nucleotide(String _ID){
-        setID(_ID);
-    }
+
     public void prepareForCraft(Virologist v) {
         int needed = v.getNeededNucleo();
         while(needed > 0){

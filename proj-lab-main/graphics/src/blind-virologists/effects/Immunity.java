@@ -22,14 +22,6 @@ public class Immunity extends Effect {
     }
 
     /**
-     * Az Immunity osztaly konstruktora.
-     * @param dur ilyen hosszan tart az effekt.
-     */
-    public Immunity(int dur) {
-        duration = dur;
-    }
-
-    /**
      * Az Immunity osztaly konstruktora, 3 meretu durationnal.
      * @param id az id-ja az adott peldanynak.
      */

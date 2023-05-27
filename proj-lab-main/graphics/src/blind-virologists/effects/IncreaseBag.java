@@ -28,16 +28,7 @@ public class IncreaseBag extends Effect {
         this.setID(ID);
     }
 
-    /**
-     * A IncreaseBag osztaly konstruktora
-     *
-     * @param duration ilyen hosszan tart az effekt
-     * @param ID       azonosito
-     */
-    public IncreaseBag(int duration, String ID) {
-        this.bagDuration = duration;
-        this.setID(ID);
-    }
+
 
     /**
      * A IncreaseBag osztaly konstruktora

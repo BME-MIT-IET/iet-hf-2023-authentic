@@ -26,15 +26,7 @@ public class Cape extends Equipment {
         }
         e = new Protection(10);
     }
-    public Cape(String _ID){
-        try {
-            this.img= ImageIO.read(new File(Main.wdPath+"/assets/equipment/cape.png"));
-        } catch (IOException ex) {
-            ex.printStackTrace();
-        }
-        e = new Protection(10);
-        setID(_ID);
-    }
+
     public Effect use(Citizen target) {
         return e;
     }
