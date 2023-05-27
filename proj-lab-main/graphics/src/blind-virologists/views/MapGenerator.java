@@ -102,7 +102,10 @@ public class MapGenerator {
                         int equipmentType = r.nextInt(7);
                         Equipment e = null;
 
+
+
                         switch (equipmentType) {
+
                             case 0:
                                 e = new Axe();
                                 break;
@@ -117,6 +120,8 @@ public class MapGenerator {
                             case 5:
                             case 6:
                                 e = new Gloves();
+                                break;
+                            default:
                                 break;
                         }
 
@@ -161,6 +166,9 @@ public class MapGenerator {
                                     break;
                                 case 2:
                                     ef = new Forget();
+                                    break;
+                                    default:
+                                        break;
                             }
                             a = new Virus(ef);
                         } else {
@@ -180,7 +188,7 @@ public class MapGenerator {
                         effectType = r.nextInt(3);
                         aminoCost = r.nextInt(2);
                         nucleoCost = r.nextInt(2);
-                        a = null;
+
                         ef = null;
                         if (agentType == 0) {
                             switch (effectType) {
@@ -192,6 +200,9 @@ public class MapGenerator {
                                     break;
                                 case 2:
                                     ef = new Forget();
+                                    break;
+                                default:
+                                    break;
                             }
                             a = new Virus(ef);
                         } else {
