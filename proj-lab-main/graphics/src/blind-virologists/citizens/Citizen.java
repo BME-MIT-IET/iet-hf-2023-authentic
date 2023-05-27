@@ -28,6 +28,8 @@ public abstract class Citizen implements Visitor {
 
     protected Color color = Color.ORANGE;
 
+    Random random= new Random();
+
     public Citizen() {
     }
 
@@ -94,7 +96,8 @@ public abstract class Citizen implements Visitor {
      */
     public boolean addEffect(Effect effect) {
         if (effect == null) return true;
-        int szam = new Random().nextInt(100);   //random szam az immunitas veletlenszerusegehez
+
+        int szam = random.nextInt(100);   //random szam az immunitas veletlenszerusegehez
         if (reflect) {
             reflect = false;
             reflectCount++;

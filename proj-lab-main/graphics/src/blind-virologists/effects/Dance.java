@@ -14,6 +14,8 @@ import java.util.Random;
  */
 public class Dance extends Effect {
 
+    Random random = new Random();
+
     /**
      * Az osztaly konstruktora, letrehozza az adott peldanyt 3 meretu durationnal.
      */
@@ -69,13 +71,13 @@ public class Dance extends Effect {
      */
     @Override
     public void applyEffect(Citizen affectedCitizen) {
-        Random random = new Random();
+
         double randomNumber = random.nextDouble()*1000;
         if( randomNumber > affectedCitizen.getResistance() *10) {
             ArrayList<Field> neighborsFreeFields;
             neighborsFreeFields = affectedCitizen.getMoves();
-            Random rand = new Random();
-            Field randomNeighborsField = neighborsFreeFields.get(rand.nextInt(neighborsFreeFields.size()));
+
+            Field randomNeighborsField = neighborsFreeFields.get(random.nextInt(neighborsFreeFields.size()));
             affectedCitizen.setDirection(randomNeighborsField);
         }
     }
