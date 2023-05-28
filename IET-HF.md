@@ -7,7 +7,7 @@
 ## Projekt célja:
 
 A **Szoftver projekt laboratórium tantárgy feladatát** fogjuk tesztelni a következő négy módszerrel:
-- Manuális kód átvizsgálás az alkalmazás egy részére + Statikus analízis eszköz futtatása és jelzett hibák átnézése (SonarCloud, VS Code Analyzer).
+- Manuális kód átvizsgálás az alkalmazás egy részére + Statikus analízis eszköz futtatása és jelzett hibák átnézése (SonarCloud, Codacy, SonarLint).
 - Deployment segítése (Docker konténerizáció)
 - Nem-funkcionális jellemzők vizsgálata (teljesítmény, stresszteszt, biztonság, használhatóság)
 - Manuális tesztek írása (Tervek, Végrehajtás, Eredmények)
