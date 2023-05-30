@@ -28,6 +28,8 @@ public abstract class Citizen implements Visitor {
 
     protected Color color = Color.ORANGE;
 
+    Random random= new Random();
+
     public Citizen() {
     }
 
@@ -94,7 +96,8 @@ public abstract class Citizen implements Visitor {
      */
     public boolean addEffect(Effect effect) {
         if (effect == null) return true;
-        int szam = new Random().nextInt(100);   //random szam az immunitas veletlenszerusegehez
+
+        int szam = random.nextInt(100);
         if (reflect) {
             reflect = false;
             reflectCount++;
@@ -138,16 +141,9 @@ public abstract class Citizen implements Visitor {
         this.resistance = resistance;
     }
 
-    public Field getDirection() {
-        return direction;
-    }
 
     public void setDirection(Field direction) {
         this.direction = direction;
-    }
-
-    public boolean isReflect() {
-        return reflect;
     }
 
     public void setReflect(boolean reflect) {

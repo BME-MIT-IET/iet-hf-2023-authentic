@@ -15,7 +15,7 @@ public abstract class Agent {
     /**
      * Az agent parameter nelkuli konstruktora
      */
-    public Agent() {
+    protected Agent() {
         this.effect = null;
         this.ID = null;
     }
@@ -25,7 +25,7 @@ public abstract class Agent {
      *
      * @param ID az agens azonositoja
      */
-    public Agent(String ID) {
+    protected Agent(String ID) {
         this.effect = null;
         this.ID = ID;
     }
@@ -35,7 +35,7 @@ public abstract class Agent {
      *
      * @param effect az agens altal megvalositott effekt
      */
-    public Agent(Effect effect) {
+    protected Agent(Effect effect) {
         this.effect = effect;
     }
 
@@ -45,7 +45,7 @@ public abstract class Agent {
      * @param effect az agens altal megvalositott effekt
      * @param ID     az agens azonositoja
      */
-    public Agent(Effect effect, String ID) {
+    protected Agent(Effect effect, String ID) {
         this.effect = effect;
         this.ID = ID;
     }

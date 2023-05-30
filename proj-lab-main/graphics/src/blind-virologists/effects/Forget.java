@@ -23,14 +23,7 @@ public class Forget extends Effect {
         setID("f" + i);
     }
 
-    /**
-     * A Forget osztaly konstruktora.
-     * @param id az id-ja az adott peldanynak.
-     */
-    public Forget(String id) {
-        duration = 1;
-        setID(id);
-    }
+
 
     /**
      * Kitorli a virologus osszes ismert genetikai kodjat.

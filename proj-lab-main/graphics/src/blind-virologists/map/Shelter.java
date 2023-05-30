@@ -73,6 +73,7 @@ public class Shelter extends Field {
      *
      * @return a mezon levo equipment
      */
+    @Override
     public Equipment getEquipment() {
         return equipment;
     }

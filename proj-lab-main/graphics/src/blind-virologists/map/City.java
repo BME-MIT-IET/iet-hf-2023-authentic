@@ -2,12 +2,12 @@ package map;
 
 import citizens.Citizen;
 import citizens.Virologist;
-import effects.Effect;
+
 import items.*;
 import main.Main;
 
 import javax.swing.*;
-import java.awt.event.WindowEvent;
+
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
@@ -22,6 +22,8 @@ public class City {
     private ArrayList<Citizen> players;
     private ArrayList<Field> fields;
     private int codeCount;
+
+    Random random = new Random();
 
     /**
      * A City osztaly konstruktora
@@ -75,21 +77,6 @@ public class City {
         this.fields = fields;
     }
 
-    /**
-     * Beallitja a kodok maximalis szamat
-     *
-     * @param codes a kodok max szama
-     */
-    public void setCodeCount(int codes) {
-        this.codeCount = codes;
-    }
-
-    /**
-     * Visszaadja a kodok maximalis szamat
-     */
-    public int getCodeCount() {
-        return codeCount;
-    }
 
     /**
      * Hozzaad egy jatekost a city listajahoz
@@ -165,7 +152,7 @@ public class City {
         il2.setCode(new Code(new Virus(), 3, 2));
 
 
-        Random random = new Random();
+
         for (int i = 0; i < playerCount - 1; i++) {
             boolean found = false;
             while (!found) {
@@ -179,14 +166,14 @@ public class City {
         }
 
 
-        Random random2 = new Random();
+
         for (int i = 0; i < fieldCount - 1; i++) {
-            int temp = random2.nextInt(6 - 3 + 1) + 3;
+            int temp = random.nextInt(6 - 3 + 1) + 3;
             for (int x = 0; x < temp - 1; x++) {
                 boolean foundN = false;
                 while (!foundN) {
                     Field temp2 = fields.get(random.nextInt(fieldCount - 1));
-                    if (fields.get(i).getNeighbors().contains(temp2) != true) {
+                    if (!fields.get(i).getNeighbors().contains(temp2)) {
                         fields.get(i).addNeighbor(temp2);
                         foundN = true;
                     }
@@ -200,10 +187,7 @@ public class City {
     /**
      * Kiirja a tesztesetekhez szukseges informaciokat az adott objektumrol
      */
-    /*
-    public String toString(){
-    }
-    */
+
 
     /**
      * Elinditja a jatekot
